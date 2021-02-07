@@ -23,6 +23,7 @@ class CreateCustomerService {
     if (customer) {
       throw new AppError('customer have be castrated');
     }
+
     customer = await this.customersRepository.create({ name, email });
 
     return customer;
